@@ -73,6 +73,7 @@ The following sensors are created:
 I used the following hardware:
 - M5Stack: https://nl.aliexpress.com/item/1005003299215808.html
 - M5Stack RS-232 add-on: https://nl.aliexpress.com/item/1005005933403536.html
+- 12V to USB-C: https://nl.aliexpress.com/item/1005005788028410.html
 
 ![image](https://github.com/tieskuh/esphome-comfoair/assets/115901851/30fac702-c32d-469d-85dd-78bd432e304a)
 
@@ -87,5 +88,8 @@ Pin layout:
 
 ![image](https://github.com/tieskuh/esphome-comfoair/assets/115901851/6c8e96ea-fa3e-4b4c-8c62-9d6a73201175)
 
+The board of the WHR950 has a 12V out (look for a connector with 12v and GND). You can connect the power supply there. With the 12V power supply you don't have any cables coming out of your WHR. You can keep everything internal so no wires coming out of your WHR when you close it. 
+
+![image](https://github.com/tieskuh/esphome-comfoair/assets/115901851/a5fcdc50-9403-46bd-8f2b-690b01e439c8)
 
 
