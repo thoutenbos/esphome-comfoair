@@ -3,7 +3,7 @@ Port of ComfoAir protocol to ESPHome.io firmware originally by @wichers modified
 to be installed as external_components. Modified for the Zehnder WHR 950 by @tieskuh.
 
 # Configuration
-No need to download this repository manually. Just add to your yaml configuration the definition of `external_components`:
+No need to download this repository manually. Just add to the bottom of your ESPHome yaml configuration the definition of `external_components`:
 ```
 external_components:
   - source:
