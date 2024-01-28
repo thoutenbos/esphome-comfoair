@@ -3,7 +3,7 @@ Port of ComfoAir protocol to ESPHome.io firmware originally by @wichers modified
 to be installed as external_components. Modified for the Zehnder WHR 950 by @tieskuh.
 
 # Configuration
-Add to your yaml configuration the definition of `external_components`:
+No need to download this repository manually. Just add to your yaml configuration the definition of `external_components`:
 ```
 external_components:
   - source:
@@ -13,7 +13,7 @@ external_components:
     refresh: 0s
 ```
 
-and than use it:
+and than add:
 ```
 uart:
   id: uart_bus
@@ -71,6 +71,7 @@ The following sensors are created:
 
 # Hardware
 I used the following hardware:
+- Random serial cable (D-SUB 9PIN Male)
 - M5Stack: https://nl.aliexpress.com/item/1005003299215808.html
 - M5Stack RS-232 add-on: https://nl.aliexpress.com/item/1005005933403536.html
 - 12V to USB-C: https://nl.aliexpress.com/item/1005005788028410.html
