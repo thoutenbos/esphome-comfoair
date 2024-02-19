@@ -23,6 +23,7 @@ uart:
 
 comfoair:
   name: "WHR 950"
+  id: comfoair_climate
   uart_id: uart_bus
   fan_supply_air_percentage:
     name: "Supply fan"
@@ -59,8 +60,7 @@ button:
     on_press:
       then:
         - lambda: |-
-                auto reset_filter = new esphome::comfoair::ComfoAirComponent();
-                reset_filter->reset_filter();
+              id(comfoair_climate)->reset_filter();
 ```
 
 # Sensors
