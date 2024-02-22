@@ -71,7 +71,7 @@ The following sensors are created:
 
 # Hardware
 I used the following hardware:
-- Random serial cable (D-SUB 9PIN Male)
+- Serial cable (D-SUB 9PIN Male)
 - M5Stack: https://nl.aliexpress.com/item/1005003299215808.html
 - M5Stack RS-232 add-on: https://nl.aliexpress.com/item/1005005933403536.html
 - 12V to USB-C: https://nl.aliexpress.com/item/1005005788028410.html
