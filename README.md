@@ -1,6 +1,7 @@
 # Zehnder WHR 950 ESPHOME
 Port of ComfoAir protocol to ESPHome.io firmware originally by @wichers modified by @nyxnyx
 to be installed as external_components. Modified for the Zehnder WHR 950 by @tieskuh.
+With some cheap hardware found below, you can connect your Zehnder to HomeAssistant.
 
 # Configuration
 No need to download this repository manually. Just add to the bottom of your ESPHome yaml configuration the definition of `external_components`:
