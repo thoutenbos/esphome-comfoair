@@ -9,6 +9,7 @@ esp32:
 
 # Enable logging
 logger:
+  baud_rate: 0
 
 # Enable Home Assistant API
 api:
@@ -16,7 +17,6 @@ api:
     key: ""
 
 ota:
-  password: ""
 
 wifi:
   ssid: !secret wifi_ssid
@@ -27,21 +27,18 @@ wifi:
     ssid: "Zehnder-Whr-950 Fallback Hotspot"
     password: ""
 
-captive_portal:
-
-
 external_components:
   - source:
-      type: git
-      url: https://github.com/tieskuh/esphome-comfoair
+      type: local
+      path: .
     components: [comfoair]
-    refresh: 0s
 
 uart:
   id: uart_bus
-  rx_pin: 22
-  tx_pin: 19
+  rx_pin: GPIO16
+  tx_pin: GPIO17
   baud_rate: 9600
+  debug:
 
 comfoair:
   name: "WHR 950"
@@ -56,8 +53,6 @@ comfoair:
     name: "Exhaust fan speed"
   is_bypass_valve_open:
     name: "Bypass"
-  is_preheating:
-    name: "Preheating"
   outside_air_temperature:
     name: "Outside temperature"
   supply_air_temperature:
@@ -66,20 +61,3 @@ comfoair:
     name: "Return temperature"
   exhaust_air_temperature:
     name: "Exhaust temperature"
-  is_supply_fan_active:
-    name: "Supply fan"
-  is_filter_full:
-    name: "Filter status"
-  bypass_step:
-    name: "Bypass valve"
-  is_summer_mode:
-    name: "Summer mode"
-
-button:
-  - platform: template
-    name: "Reset filter"
-    on_press:
-      then:
-        - lambda: |-
-                auto reset_filter = new esphome::comfoair::ComfoAirComponent();
-                reset_filter->reset_filter();
